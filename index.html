@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Simple Vue Calculator</title>
+</head>
+<body>
+
+  <div id="app">
+
+    <div class="calculator">
+        <div class="readout"><p>{{readout}}</p></div>
+        <button v-on:click="clearCalculator" class="operator ac-button">AC</button>
+        <div class="buttons">
+          <button v-on:click="addToReadout(7)">7</button>
+          <button v-on:click="addToReadout(6)">8</buptton>
+          <button v-on:click="addToReadout(5)">9</button>
+
+          <button v-on:click="addOperatorToReadout('/')" class="operator">/</button>
+
+          <button v-on:click="addToReadout(4)">4</button>
+          <button v-on:click="addToReadout(5)">5</button>
+          <button v-on:click="addToReadout(6)">6</button>
+
+          <button v-on:click="addOperatorToReadout('*')" class="operator">*</button>
+
+          <button v-on:click="addToReadout(1)">1</button>
+          <button v-on:click="addToReadout(2)">2</button>
+          <button v-on:click="addToReadout(3)">3</button>
+
+          <button v-on:click="addOperatorToReadout('-')" class="operator">-</button>
+
+          <button v-on:click="addToReadout(0)">0</button>
+
+          <button v-on:click="addToReadout('.')" class="operator">.</button>
+          <button v-on:click="solveAnswer" class="answer-button">=</button>
+          <button v-on:click="addOperatorToReadout('+')" class="operator">+</button>
+        </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
