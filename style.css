@@ -1,0 +1,197 @@
+/* CSS Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* End of reset  ----------------------*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #41b883;
+}
+
+.calculator {
+  width: 30%;
+  height: 60%;
+  padding: 0.5em;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 1px #41b883;
+  border-radius: 0.5em;
+  box-shadow: 0 3px 2px #777;
+  background-color: #FFFF;
+}
+
+.readout {
+  width: 100%;
+  height: 15%;
+  margin-bottom: 1em;
+}
+
+.readout p {
+  height: 100%;
+  padding: 0.3em 0.6em;
+  border: solid 1px black;
+  font-family: "Helvetica Neu", sans-serif;
+  font-size: 175%;
+  font-weight: 600;
+  text-align: right;
+  color: #7f8c8d;
+}
+
+.ac-button {
+  width: 20%;
+  margin-left: 0.5em;
+  height: 10%;
+}
+
+.buttons {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5em;
+  padding: 0.5em;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  border: 1px solid #7f8c8d;
+  font-family: "Helvetica Neu", sans-serif;
+  font-size: 150%;
+  font-weight: 600;
+  color: #7f8c8d;
+  background-color: #f6f6f6;
+}
+
+.operator {
+  background-color: #35495e !important;
+  color: white !important;
+}
+
+.answer-button {
+  background-color: #4fc08d !important;
+  color: white !important;
+}
+
+button:hover {
+  animation: button-hover 0.4s forwards;
+}
+
+button:active {
+  animation: button-press 0.2s forwards;
+}
+
+@keyframes button-hover {
+  from {
+    background-color: #f6f6f6;
+  }
+  to {
+    background-color: #666666;
+  }
+}
+
+@keyframes button-press {
+  from {
+    background-color: #666666;
+  }
+  to {
+    background-color: #48bb87;
+  }
+}
+
+/* Breakpoints -------------- */
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  .calculator {
+    width: 100%;
+    height: 100%;
+  }
+
+  button {
+    height: 90%;
+  }
+
+  .buttons {
+    grid-gap: 0.25em;
+  }
+
+  .readout p {
+    font-size: 200%;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 850px) {
+  .calculator {
+    width: 75%;
+    height: 90%;
+  }
+}
+
+@media only screen and (min-width: 851px) {
+}
