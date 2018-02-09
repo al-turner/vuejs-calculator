@@ -99,6 +99,7 @@ body {
   font-family: "Helvetica Neu", sans-serif;
   font-size: 175%;
   font-weight: 600;
+  overflow: hidden;
   text-align: right;
   color: #7f8c8d;
 }
@@ -145,6 +146,7 @@ button:hover {
 
 button:active {
   animation: button-press 0.2s forwards;
+  border: none;
 }
 
 @keyframes button-hover {
